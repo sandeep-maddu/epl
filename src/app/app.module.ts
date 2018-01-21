@@ -13,10 +13,12 @@ import {YearPipe} from './year.pipe';
 import {TeamPipe} from './team.pipe';
 //import {NgxChartsModule} from '@swimlane/ngx-charts';
 //import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 import { FusionChartsModule } from 'angular2-fusioncharts';
 import * as FusionCharts from 'fusioncharts';
 import * as Charts from 'fusioncharts/fusioncharts.charts';
-import * as Fint from 'fusioncharts/themes/fusioncharts.theme.fint';
+import * as Widgets from 'fusioncharts/fusioncharts.widgets';
+
 
 
 
@@ -77,7 +79,7 @@ import { ChartLossstreakComponent } from './chart-lossstreak/chart-lossstreak.co
 
   ],
   imports: [
-    BrowserModule,HttpModule,FormsModule,appRouterModule,FusionChartsModule.forRoot(FusionCharts, Charts, Fint)
+    BrowserModule,HttpModule,FormsModule,appRouterModule,FusionChartsModule.forRoot(FusionCharts, Charts, Widgets)
   ],
   providers: [DataServiceService, DataService ],
   bootstrap: [AppComponent]
