@@ -1,0 +1,10 @@
+<div *ngIf="match">
+
+  <h4><a [routerLink]="['/teams', match.team1.name]">{{ match.team1.name}}</a> vs <a [routerLink]="['/teams', match.team2.name]">{{match.team2.name}}</a></h4>
+  
+  <div><span><strong>Tournament:</strong> </span>{{tournament}}</div>
+  <div><span><strong>Round:</strong> </span>{{round}}</div>
+  <div><span><strong>Date:</strong> </span>{{match.date}}</div>
+  <div><span><strong>Score:</strong> </span>{{ match.score1}} - {{match.score2}}</div>
+  <div><span><strong>Result:</strong> </span>{{winner}}</div>
+</div>

@@ -1,0 +1,69 @@
+<h1>List of matches</h1>
+
+
+
+<input type="text" [(ngModel)]="yearsearch" placeholder="filter by year"><br>
+<input type="text" [(ngModel)]="roundssearch" placeholder="filter by round"><br>
+<input type="text" [(ngModel)]="datesearch" placeholder="filter by date"><br>
+<input type="text" [(ngModel)]="teamsearch" placeholder="filter by team"><br>
+<input type="text" [(ngModel)]="scoresearch" placeholder="filter by score"><br>
+<input type="text" [(ngModel)]="marginsearch" placeholder="win margin greater than">
+<br><br>
+<h4 style="color:red;">Click on a row for viewing details of the match</h4>
+<br><br>
+
+<div class="row">
+	<div class="col-md-7">
+	
+	<table id="t01" class="table table-striped table-hover">
+	<tr >
+		
+		<th class="text-center">Date</th>
+		<th class="text-center">Team 1</th>
+		<th class="text-center">Team 2</th>
+		
+		
+	</tr>
+  <ng-template let-tournament ngFor [ngForOf]="arr | YearPipe:yearsearch">
+  <ng-template let-round ngFor [ngForOf]="tournament.rounds | RoundsPipe:roundssearch">
+    <tr *ngFor="let match of round.matches | FilterPipe:datesearch:teamsearch:scoresearch:marginsearch" (click)="onSelect(tournament.name,round.name,match,match.team1.name,match.team2.name,match.score1,match.score2)">
+	
+	<td>{{ match.date }}</td> 
+	
+    <td>{{ match.team1.name }} </td> 
+    <td>{{ match.team2.name }}</td> 
+    
+    
+	</tr>
+  </ng-template>
+  </ng-template>
+  </table>
+	
+	</div>
+	
+	
+	<div class="col-md-5">
+	
+	<div class="panel panel-default">
+	<div class="panel-heading"><h4>Match details</h4></div>
+	<div class="panel-body">
+	
+	<app-match-detail [tournament]="selectedTournament" [round]="selectedRound" [match]="selectedMatch" [winner]=winner></app-match-detail>
+	
+	
+	</div>
+	
+	</div>
+	
+	</div>
+</div>
+
+
+
+
+
+
+
+  
+
+

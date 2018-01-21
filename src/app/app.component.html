@@ -1,0 +1,38 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  
+ 
+  
+	<nav class="navbar navbar-light navbar-toggleable-md" style="background-color: #e3f2fd;">
+		
+		
+			
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="navigation-menu" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+			
+			
+			<div class="collapse navbar-collapse navbar-default" role="navigation" id="myNavbar" >
+				<ul class="nav navbar-nav mr-auto">
+					<li class="nav-item">
+					<a class="nav-link" id="matcheslink" href="/matches" active>Home</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" id="teamdetailslink" href="/teams">Team details</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" id="analysislink" href="/summary">Analysis</a>
+					</li>
+				</ul>
+			</div>
+		
+	</nav>
+	
+  
+  
+  <router-outlet></router-outlet>
+</div>
+
