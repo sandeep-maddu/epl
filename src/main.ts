@@ -1,6 +1,6 @@
 import { FusionChartsModule } from 'angular2-fusioncharts';
 import * as FusionCharts from 'fusioncharts';
-import * as Charts from 'fusioncharts/fusioncharts.charts';
+import * {Charts} from 'fusioncharts/fusioncharts';
 FusionChartsModule.forRoot(FusionCharts, Charts);
 
 import { enableProdMode } from '@angular/core';
