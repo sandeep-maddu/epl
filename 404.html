@@ -1,8 +1,14 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><title>EplApp</title><base href="https://github.com/sandeep-maddu/epl/"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/x-icon" href="favicon.ico"><script>// See http://www.backalleycoder.com/2016/05/13/sghpa-the-single-page-app-hack-for-github-pages/
-  (function(){
-    var redirect = sessionStorage.redirect;
-    delete sessionStorage.redirect;
-    if (redirect && redirect != location.href) {
-      history.replaceState(null, null, redirect);
-    }
-  })();</script><!-- Latest compiled and minified CSS --><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"><link href="styles.9c0ad738f18adc3d19ed.bundle.css" rel="stylesheet"/></head><body><app-root>Loading app...</app-root><!-- jQuery (necessary for Bootstrap's JavaScript plugins) --><script type="text/javascript" src="inline.e0c578e7a8126a48e55b.bundle.js"></script><script type="text/javascript" src="polyfills.f20484b2fa4642e0dca8.bundle.js"></script><script type="text/javascript" src="main.a3c2667718a2189eb554.bundle.js"></script></body></html>
+<!doctype html>
+<html>
+  <head>
+    <!-- This stores the URL the user was attempting to go to in sessionStorage,
+    and then redirects all 404 responses to the app’s index.html page -->
+    <!-- See http://www.backalleycoder.com/2016/05/13/sghpa-the-single-page-app-hack-for-github-pages/ -->
+    <script>
+      sessionStorage.redirect = location.href;
+    </script>
+    <meta http-equiv="refresh" content="0;URL='https://sandeep-maddu.github.io/epl'"></meta>
+  </head>
+  <body>
+  </body>
+</html>
