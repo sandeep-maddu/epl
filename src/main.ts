@@ -1,3 +1,8 @@
+import { FusionChartsModule } from 'angular2-fusioncharts';
+import * as FusionCharts from 'fusioncharts';
+import * as Charts from 'fusioncharts/fusioncharts.charts';
+FusionChartsModule.forRoot(FusionCharts, Charts);
+
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
